@@ -10,29 +10,28 @@ namespace GraphExample
     {
         public string Data { get; set; } //city
 
-        //public List<Node> Neighbors { get; set; } = new List<Node>();//neighboring cities
-        //not necessary bc its implied thru edges
+        public List<Node> Neighbors { get; set; } = new List<Node>();//neighboring cities
 
-        public List<WeightedEdge> Edges { get; set; } = new List<WeightedEdge>();//flight from this city to another
+        //public List<WeightedEdge> Edges { get; set; } = new List<WeightedEdge>();//flight from this city to another
 
         public Node(string data)
         {
             Data = data;
         }
 
-        //public void AddNeighbor(Node neighbor)
+        public void AddNeighbor(Node neighbor)
+        {
+            Neighbors.Add(neighbor);
+        }
+
+        //public void AddEdge(Node neighbor, int mileage)
         //{
-        //    Neighbors.Add(neighbor);
+        //    Edges.Add(new WeightedEdge(this, neighbor, mileage));
         //}
 
-        public void AddEdge(Node neighbor, int mileage)
-        {
-            Edges.Add(new WeightedEdge(this, neighbor, mileage));
-        }
-
-        public void AddEdge(WeightedEdge edge)
-        {
-            Edges.Add(edge);
-        }
+        //public void AddEdge(WeightedEdge edge)
+        //{
+        //    Edges.Add(edge);
+        //}
     }
 }

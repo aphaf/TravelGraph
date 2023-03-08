@@ -19,10 +19,10 @@ namespace GraphExample
             Destination = destination;
             Mileage = mileage;
 
-            //Origin.AddNeighbor(Destination);
-            //Destination.AddNeighbor(Origin);
-            
-            Origin.AddEdge(this);
+            Origin.AddNeighbor(Destination);
+            Destination.AddNeighbor(Origin);
+
+            //Origin.AddEdge(this);
 
             //Origin.AddEdge(destination, mileage);
             //Destination.AddEdge(origin, mileage);
