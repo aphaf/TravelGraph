@@ -19,11 +19,16 @@ namespace GraphExample
             Destination = destination;
             Mileage = mileage;
 
-            Origin.AddNeighbor(Destination);
-            Destination.AddNeighbor(Origin);
-
+            //Origin.AddNeighbor(Destination);
+            //Destination.AddNeighbor(Origin);
+            
             Origin.AddEdge(this);
-            Destination.AddEdge(this);
+
+            //Origin.AddEdge(destination, mileage);
+            //Destination.AddEdge(origin, mileage);
+
+            //Destination.AddEdge(this);
+            // Destination.AddEdge(new WeightedEdge(Destination, Origin, this.Mileage));
         }
     }
 }
