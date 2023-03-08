@@ -44,16 +44,16 @@ foreach (WeightedEdge eachEdge in graph.AllEdges)
 }
 
 
-
-
-
-/*
- need to figure out how to connect destination with correct edges, this search works up until the last city, bc of this connection issue
- 
- */
-
-Console.WriteLine("\n--BFS nodes--");
+Console.WriteLine("\n--BFS nodes from First--");
 List<Node> bfsNodes = graph.BreadthFirstSearch(graph.Nodes.First());
+
+foreach (Node eachNode in bfsNodes)
+{
+    Console.WriteLine(eachNode.Data);
+}
+
+Console.WriteLine("\n--BFS nodes from Last--");
+bfsNodes = graph.BreadthFirstSearch(graph.Nodes.Last());
 
 foreach (Node eachNode in bfsNodes)
 {
